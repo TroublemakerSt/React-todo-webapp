@@ -2,7 +2,7 @@ import React from 'react';
 
 class Checkbox extends React.Component {
   constructor() {
-    super();;
+    super();
 
     this.state = {
       checked: true,
