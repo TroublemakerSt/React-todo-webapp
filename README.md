@@ -10,8 +10,8 @@ Some pic
 - Decomposition
 
 ## Need to do
-⋅⋅* Add tasks
-⋅⋅* Forms
-⋅⋅* Server side
-⋅⋅* Animation
-⋅⋅* Routing with React Router
+- Add tasks
+- Forms
+- Server side
+- Animation
+- Routing with React Router
