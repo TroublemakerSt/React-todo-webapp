@@ -8,6 +8,7 @@ Some pic
 ## Completed
 - Visual side
 - Decomposition
+- Statistics component
 
 ## Need to do
 - Add tasks
