@@ -11,7 +11,7 @@ Some pic
 - Statistics component
 
 ## Need to do
-- Add tasks
+- Field for add tasks
 - Forms
 - Server side
 - Animation
