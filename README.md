@@ -8,7 +8,6 @@ Some pic
 ## Completed
 - Visual side
 - Decomposition
-- 
 
 ## Need to do
 ⋅⋅* Add tasks
