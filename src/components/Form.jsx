@@ -14,9 +14,9 @@ class Form extends React.Component {
   render() {
     return (
       <form className="todo-form">
-        <input type="text" placeholder="Что нужно сделать?" />
+        <input type="text" placeholder="What you need to do?" />
 
-        <Button type="submit">Добавить</Button>
+        <Button type="submit">Add</Button>
       </form>
     );
   }
