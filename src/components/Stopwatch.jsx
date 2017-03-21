@@ -22,6 +22,10 @@ class Stopwatch extends React.Component {
     this.interval = setInterval(this.tick, 1000);
   }
 
+  componentWillMount() {
+    clearInterval(this.interval);
+  }
+
   tick() {
     if (this.state.running) {
       let now = Date.now();
