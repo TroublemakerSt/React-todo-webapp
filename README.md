@@ -16,10 +16,11 @@ Some pic
 - Forms
 - Editing tasks
 - Timer
+- Server side with Axios
 
 ## Need to do
-~~Field for add tasks~~
+- [x] Field for add tasks
 ~~Forms~~
-- Server side
+~~Server side~~
 - Animation
 - Routing with React Router
