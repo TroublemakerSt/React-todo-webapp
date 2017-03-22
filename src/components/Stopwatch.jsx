@@ -22,7 +22,7 @@ class Stopwatch extends React.Component {
     this.interval = setInterval(this.tick, 1000);
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     clearInterval(this.interval);
   }
 

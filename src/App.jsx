@@ -11,13 +11,20 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      todos: this.props.initialData,
+      todos: [],
     };
 
     this.handleStatusChange = this.handleStatusChange.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  componentDidMount() {
+    fetch('/api/todos')
+      .then(response => response.json())
+      .then(todos => this.setState({ todos }))
+      .catch(error => console.error(error));
   }
 
   nextId() {
