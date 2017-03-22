@@ -1,7 +1,7 @@
 {
   "name": "react-basics",
   "version": "1.0.0",
-  "description": "Исходный код для курса Основы React",
+  "description": "React TODO app",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --content-base ./public",
     "build": "webpack -p"
