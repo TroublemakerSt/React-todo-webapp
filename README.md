@@ -9,18 +9,19 @@ Some pic
 
 
 ## Completed
-- Visual side
-- Decomposition
-- Statistics component
-- Field for add tasks
-- Forms
-- Editing tasks
-- Timer
-- Server side with Axios
+- [x] Visual side
+- [x] Decomposition
+- [x] Statistics component
+- [x] Field for add tasks
+- [x] Forms
+- [x] Editing tasks
+- [x] Timer
+- [x] Server side with Axios
 
 ## Need to do
-- [x] Field for add tasks
-~~Forms~~
-~~Server side~~
-- Animation
-- Routing with React Router
+- [ ] Animation
+- [ ] Routing with React Router
+
+## Why server side use Axios?
+Short answer:  features.
+- [Axios](https://github.com/mzabriskie/axios)
