@@ -17,11 +17,11 @@ Some pic
 - [x] Editing tasks
 - [x] Timer
 - [x] Server side with Axios
-
-## Need to do
-- [ ] Animation
-- [ ] Routing with React Router
+- [x] Animation
 
 ## Why server side use Axios?
 Short answer:  features.
 - [Axios](https://github.com/mzabriskie/axios)
+
+## Animation
+-[ReactCSSTransitionGroup](https://www.npmjs.com/package/react-addons-css-transition-group)
