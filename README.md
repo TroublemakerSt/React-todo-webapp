@@ -19,6 +19,13 @@ Some pic
 - [x] Server side with Axios
 - [x] Animation
 
+## Development
+
+```
+npm install
+npm start
+```
+
 ## Why server side use Axios?
 Short answer:  features.
 - [Axios](https://github.com/mzabriskie/axios)
