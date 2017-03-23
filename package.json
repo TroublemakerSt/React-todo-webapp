@@ -1,7 +1,7 @@
 {
   "name": "react-basics",
   "version": "1.0.0",
-  "description": "React TODO App Ilya Kulikov",
+  "description": "React ToDo App Ilya Kulikov",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --content-base ./public",
     "build": "webpack -p"

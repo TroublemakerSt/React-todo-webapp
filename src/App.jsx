@@ -13,7 +13,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      todos: [],
+      todos: [ ],
     };
 
     this.handleStatusChange = this.handleStatusChange.bind(this);

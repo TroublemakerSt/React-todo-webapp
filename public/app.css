@@ -215,6 +215,7 @@ header h1 {
 }
 
 /* Animation with ReactCSSTransitionGroup */
+
 .slide-enter {
   transform: translateX(-100%);
   transition: all .5s;
