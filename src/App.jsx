@@ -94,6 +94,8 @@ class App extends React.Component {
           component="section"
           className="todo-list"
           transitionName="slide"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
           transitionEnterTimeout={500}
           transitionLeaveTimeout={500}>
           {this.state.todos.map(todo =>

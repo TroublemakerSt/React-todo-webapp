@@ -232,3 +232,12 @@ header h1 {
   transform: translateX(100%);
   transition: all .5s;
 }
+
+.slide-appear {
+  opacity: 0;
+}
+
+.slide-appear.slide-appear-active {
+  opacity: 1;
+  transition: all .5s;
+}
