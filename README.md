@@ -24,4 +24,4 @@ Short answer:  features.
 - [Axios](https://github.com/mzabriskie/axios)
 
 ## Animation
--[ReactCSSTransitionGroup](https://www.npmjs.com/package/react-addons-css-transition-group)
+- [ReactCSSTransitionGroup](https://www.npmjs.com/package/react-addons-css-transition-group)
