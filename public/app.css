@@ -213,3 +213,22 @@ header h1 {
 .todo-form button {
     margin-left: 10px;
 }
+
+/* Animation with ReactCSSTransitionGroup */
+.slide-enter {
+  transform: translateX(-100%);
+  transition: all .5s;
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0);
+}
+
+.slide-leave {
+  transform: translateX(0);
+}
+
+.slide-leave.slide-leave-active {
+  transform: translateX(100%);
+  transition: all .5s;
+}
