@@ -130,4 +130,4 @@ App.defaultProps = {
   title: 'React Todo',
 };
 
-const dom = ReactDOM.render(<App initialData={todos} />, document.querySelector('#root'));
+ReactDOM.render(<App initialData={todos} />, document.querySelector('#root'));
