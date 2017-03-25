@@ -1,5 +1,5 @@
 # React-todo-webapp
-React-todo-web-app in dev progress...
+SPA React todo web app
 
 Some pic
 ------
@@ -22,6 +22,11 @@ Some pic
 ```
 npm install
 npm start
+```
+then in new terminal tab
+
+```
+node start
 ```
 
 ## Why server side use Axios?
