@@ -17,6 +17,10 @@ Some pic
 - [x] Server side with Axios
 - [x] Animation
 
+## Soon
+
+- [ ] Redux
+
 ## Development
 
 ```
