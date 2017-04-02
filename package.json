@@ -6,6 +6,12 @@
     "start": "webpack-dev-server --inline --hot --content-base ./public",
     "build": "webpack -p"
   },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "dependencies": {
     "axios": "^0.15.3",
     "body-parser": "1.17.1",

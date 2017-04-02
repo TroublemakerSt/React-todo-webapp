@@ -31,11 +31,13 @@ class App extends React.Component {
     axios.patch(`/api/todos/${id}`)
     .then(response => {
       const todos = this.state.todos.map(todo => {
-        if (todo.id === id) {
-          todo = response.data;
+        if (todo.id !== id) {
+          return todo;
         }
 
-        return todo;
+        return Object.assign({}, todo, {
+          completed: !todo.completed,
+        });
       });
 
       this.setState({ todos });
@@ -46,7 +48,11 @@ class App extends React.Component {
   handleDelete(id) {
     axios.delete(`/api/todos/${id}`)
     .then(() => {
-      const todos = this.state.todos.filter(todo => todo.id !== id);
+      const index = this.state.todos.findIndex(todo => todo.id === id);
+      const todos =  [
+        ...this.state.todos.slice(0, index),
+        ...this.state.todos.slice(index + 1),
+      ];
 
       this.setState({ todos });
     })
@@ -57,11 +63,13 @@ class App extends React.Component {
     axios.put(`/api/todos/${id}`, { title })
     .then(response => {
       const todos = this.state.todos.map(todo => {
-        if (todo.id === id) {
-          todo.title = title;
+        if (todo.id !== id) {
+          return todo;
         }
 
-        return todo;
+        return Object.assign({}, todo, {
+          title,
+        });
       });
 
       this.setState({ todos });
