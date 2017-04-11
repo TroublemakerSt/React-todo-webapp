@@ -3,7 +3,7 @@ SPA React + Axios ToDo Web App without Redux
 
 Some pic
 ------
-![todo5](https://cloud.githubusercontent.com/assets/23314692/24155528/c824b122-0e5c-11e7-8ccf-1228d6e5ff48.jpg)
+![todoapp](https://cloud.githubusercontent.com/assets/23314692/24918297/9948420a-1ee8-11e7-8d4f-ba1889b6a022.jpg)
 
 
 ## Completed
@@ -16,10 +16,7 @@ Some pic
 - [x] Timer
 - [x] Server side with Axios
 - [x] Animation
-
-## Soon
-
-- [ ] Redux
+- [x] Redux
 
 ## Development
 
