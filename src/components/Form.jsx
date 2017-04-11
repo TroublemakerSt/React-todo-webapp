@@ -10,13 +10,16 @@ class Form extends React.Component {
       title: '',
     };
 
+    this.store = this.props.store;
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    let title = this.state.title;
+
+    const title = this.state.title;
 
     if (title) {
       this.props.onAdd(title);
@@ -25,21 +28,22 @@ class Form extends React.Component {
   }
 
   handleChange(event) {
-    let title = event.target.value;
+    const title = event.target.value;
 
     this.setState({ title });
   }
 
   render() {
     return (
-      <form className="todo-form" onSubmit={this.handleSubmit}>
+      <form className="todo-add-form" onSubmit={this.handleSubmit}>
         <input
           type="text"
           value={this.state.title}
           placeholder="What you need to do?"
-          onChange={this.handleChange} />
+          onChange={this.handleChange}
+        />
 
-        <Button type="submit">Add</Button>
+        <Button type="submit">ADD</Button>
       </form>
     );
   }

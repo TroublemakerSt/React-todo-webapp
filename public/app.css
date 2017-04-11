@@ -40,6 +40,11 @@ button:active {
     background-color: rgba(158,158,158,.4);
 }
 
+button:disabled {
+    color: rgba(0, 0, 0, 0.26);
+    pointer-events: none;
+}
+
 button.icon {
     border-radius: 50%;
     font-size: 24px;
@@ -75,13 +80,16 @@ input {
 
 main {
     background: #fff;
-    width: 700px;
-    margin: 70px auto;
+    width: 950px;
+    margin: 50px auto;
     border-radius: 2px;
     overflow: hidden;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
+
+
+/* Header */
 header {
     display: flex;
     align-items: center;
@@ -94,9 +102,11 @@ header {
 
 header h1 {
     display: inline-block;
-    color: #00d8ff;
+    color: white;
     margin: 1rem auto;
 }
+
+
 
 /* Stats */
 .stats {
@@ -138,13 +148,49 @@ header h1 {
 }
 
 
+
+/* Filter */
+.todo-filter {
+    display: flex;
+}
+
+.todo-filter a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.todo-filter a:hover {
+    background-color: rgba(158,158,158,.1);
+}
+
+.todo-filter a.is-active i {
+    color: #0196ff;
+}
+
+.todo-filter a.is-active::after {
+    height: 2px;
+    width: 100%;
+    display: block;
+    content: " ";
+    bottom: -1px;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.78);
+}
+
+
 /* Todo */
 .todo {
     display: flex;
     font-size: 1rem;
     border-top: 1px solid rgba(0,0,0,.1);
     background-color: #fff;
-    transition: all .2s;
     -webkit-user-select: none;
     user-select: none;
     padding: 1em;
@@ -153,6 +199,7 @@ header h1 {
 
 .todo.completed * {
     color: lightgray;
+    transition: color .2s;
 }
 
 .todo.completed .todo-title {
@@ -191,54 +238,56 @@ header h1 {
     margin-left: .5em;
 }
 
-/* Todo form */
 
-.todo-form {
+
+/* Todo form */
+.todo-add-form {
     display: flex;
     background-color: #FAFAFA;
     border-top: 1px solid rgba(0,0,0,.1);
     padding: 10px;
 }
 
-.todo-form input {
+.todo-add-form input {
     flex: 1;
     outline: none;
     transition: all .2s;
 }
 
-.todo-form input:focus {
-    border: 1px solid #00d8ff;
+.todo-add-form input:focus {
+    border: 1px solid #764abc;
 }
 
-.todo-form button {
+.todo-add-form button {
     margin-left: 10px;
 }
 
-/* Animation with ReactCSSTransitionGroup */
 
+
+/* Animations */
 .slide-enter {
-  transform: translateX(-100%);
-  transition: all .5s;
+    transform: translateX(-100%);
 }
 
 .slide-enter.slide-enter-active {
-  transform: translateX(0);
+    transform: translateX(0);
+    transition: all .5s;
 }
 
 .slide-leave {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 .slide-leave.slide-leave-active {
-  transform: translateX(100%);
-  transition: all .5s;
+    transform: translateX(100%);
+    transition: all .5s;
 }
 
 .slide-appear {
-  opacity: 0;
+    opacity: 0;
 }
 
 .slide-appear.slide-appear-active {
-  opacity: 1;
-  transition: all .5s;
+    opacity: 1;
+    transition: all .5s;
 }

@@ -12,36 +12,52 @@ class Todo extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
-  componentDidUpdate(revProps, prevState) {
+  componentDidUpdate(prevProps, prevState) {
     if (this.state.editing) {
       this.refs.title.focus();
-      this.refs.title.select();
     }
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    let title = this.refs.title.value;
+
+    const title = this.refs.title.value;
 
     this.props.onEdit(this.props.id, title);
     this.setState({ editing: false });
   }
 
+  handleDelete() {
+    this.props.onDelete(this.props.id);
+  }
+
+  handleToggle() {
+    this.props.onToggle(this.props.id);
+  }
+
+  handleEdit() {
+    this.setState({ editing: true });
+  }
+
   renderDisplay() {
+    const className = `todo${this.props.completed ? ' completed' : ''}`;
+
     return (
-      <div className={`todo${this.props.completed ? ' completed' : ''}`}>
-        <Checkbox
-          checked={this.props.completed}
-          onChange={() => this.props.onStatusChange(this.props.id)} />
+      <div className={className}>
+        <Checkbox checked={this.props.completed} onChange={this.handleToggle} />
 
         <span className="todo-title">{this.props.title}</span>
 
-        <Button className="edit icon" icon="edit" onClick={() => this.setState({ editing: true })} />
-        <Button className="delete icon"
-          icon="delete_forever"
-          onClick={() => this.props.onDelete(this.props.id)}
+        <Button className="edit icon" icon="edit" onClick={this.handleEdit} />
+        <Button
+          className="delete icon"
+          icon="delete"
+          onClick={this.handleDelete}
         />
       </div>
     );
@@ -62,10 +78,11 @@ class Todo extends React.Component {
 }
 
 Todo.propTypes = {
+  id: React.PropTypes.number.isRequired,
   title: React.PropTypes.string.isRequired,
   completed: React.PropTypes.bool.isRequired,
-  onStatusChange: React.PropTypes.func.isRequired,
   onDelete: React.PropTypes.func.isRequired,
+  onToggle: React.PropTypes.func.isRequired,
   onEdit: React.PropTypes.func.isRequired,
 };
 

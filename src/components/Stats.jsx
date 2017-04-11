@@ -1,9 +1,10 @@
 import React from 'react';
 
 function Stats(props) {
-  let total = props.todos.length;
-  let completed = props.todos.filter(todo => todo.completed).length;
-  let notCompleted = total - completed;
+  const total = props.todos.length;
+  const completed = props.todos.filter(todo => todo.completed).length;
+  const uncompleted = total - completed;
+
   return (
     <table className="stats">
       <tbody>
@@ -17,7 +18,7 @@ function Stats(props) {
         </tr>
         <tr>
           <th>Not completed:</th>
-          <td>{notCompleted}</td>
+          <td>{uncompleted}</td>
         </tr>
       </tbody>
     </table>
@@ -25,7 +26,13 @@ function Stats(props) {
 }
 
 Stats.propTypes = {
-  todos: React.PropTypes.array.isRequired,
+  todos: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      id: React.PropTypes.number.isRequired,
+      title: React.PropTypes.string.isRequired,
+      completed: React.PropTypes.bool.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default Stats;

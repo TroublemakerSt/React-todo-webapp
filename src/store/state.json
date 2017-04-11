@@ -1,0 +1,27 @@
+{
+  "todos": [
+      {
+          "id": 1,
+          "title": "Get Visa",
+          "completed": true
+      },
+      {
+          "id": 2,
+          "title": "Buy tickets",
+          "completed": true
+      },
+      {
+          "id": 3,
+          "title": "Book hotel",
+          "completed": false
+      },
+      {
+          "id": 4,
+          "title": "Go to the airport",
+          "completed": false
+      }
+  ],
+  "filter": "ALL",
+  "error": null,
+  "loading": false,
+}
