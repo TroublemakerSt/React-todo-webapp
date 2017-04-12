@@ -1,10 +1,18 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Todo from './Todo';
 
 function List(props) {
   return (
-    <section className="todo-list">
+    <ReactCSSTransitionGroup
+      component="section"
+      className="todo-list"
+      transitionName="slide"
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnterTimeout={500}
+      transitionLeaveTimeout={500}>
       {!props.loading && props.todos.length ?
         props.todos.map(todo =>
           <Todo
@@ -19,7 +27,7 @@ function List(props) {
         :
         <div className="loading">Загрузка...</div>
       }
-    </section>
+    </ReactCSSTransitionGroup>
   );
 }
 
