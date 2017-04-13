@@ -1,5 +1,5 @@
 # React-todo-webapp
-SPA React + Axios ToDo Web App without Redux
+SPA React + Axios ToDo Web App with Redux
 
 Some pic
 ------
