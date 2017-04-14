@@ -46,7 +46,7 @@ class Stopwatch extends React.Component {
   }
 
   handlePause() {
-    this.setState({running: false});
+    this.setState({ running: false });
   }
 
   handleStop() {

@@ -12,8 +12,6 @@ const reducer = combineReducers({
   loading: loading,
 });
 
-console.log(reducer);
-
 export default reducer;
 
 export function getFilteredTodos(state) {
